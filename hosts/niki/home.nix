@@ -58,7 +58,7 @@ in
     userName = "${gitUsername}";
     userEmail = "${gitEmail}";
     extraConfig = {
-      credential.helper = "oauth";
+      credential.helper = "cache --timeout 21600 oauth";
       init.defaultBranch = "peaplesmart";
     };
   };
