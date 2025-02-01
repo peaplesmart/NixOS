@@ -46,7 +46,8 @@ with lib;
           exec-once = nm-applet --indicator
           exec-once = lxqt-policykit-agent
           exec-once = sleep 1.5 && swww img /home/${username}/Pictures/Wallpapers/beautifulmountainscape.jpg
-          monitor =, preferred, auto, 1
+          # monitor =,preferred,auto,1
+          monitor = eDP-1, 1920x1080, 0x0, 1
           ${extraMonitorSettings}
           general {
             gaps_in = 6

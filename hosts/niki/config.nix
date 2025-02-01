@@ -31,6 +31,9 @@ in
     kernel.sysctl = {
       "vm.max_map_count" = 2147483642;
     };
+    kernelParams = [ 
+      "quiet"
+    ];
     # Bootloader.
     loader.systemd-boot.enable = true;
     loader.efi.canTouchEfiVariables = true;
@@ -48,30 +51,48 @@ in
       mask = ''\xff\xff\xff\xff\x00\x00\x00\x00\xff\xff\xff'';
       magicOrExtension = ''\x7fELF....AI\x02'';
     };
+    initrd.verbose = false;
     plymouth.enable = true;
   };
 
   # Styling Options
   stylix = {
     enable = true;
-    image = ../../config/wallpapers/beautifulmountainscape.jpg;
+    image = ../../config/wallpapers/nixos-wallpapers.png;
      base16Scheme = {
-       base00 = "232136";
-       base01 = "2a273f";
-       base02 = "393552";
-       base03 = "6e6a86";
-       base04 = "908caa";
-       base05 = "e0def4";
-       base06 = "e0def4";
-       base07 = "56526e";
-       base08 = "eb6f92";
-       base09 = "f6c177";
-       base0A = "ea9a97";
-       base0B = "3e8fb0";
-       base0C = "9ccfd8";
-       base0D = "c4a7e7";
-       base0E = "f6c177";
-       base0F = "56526e";
+      #base00 = "232136";
+      # base01 = "2a273f";
+      # base02 = "393552";
+      # base03 = "6e6a86";
+      # base04 = "908caa";
+      # base05 = "e0def4";
+      # base06 = "e0def4";
+      # base07 = "56526e";
+      # base08 = "eb6f92";
+      # base09 = "f6c177";
+      # base0A = "ea9a97";
+      # base0B = "3e8fb0";
+      # base0C = "9ccfd8";
+      # base0D = "c4a7e7";
+      # base0E = "f6c177";
+      # base0F = "56526e";
+      # GruveBox
+       base00 = "282828"; # ----
+       base01 = "3c3836"; # ---
+       base02 = "504945"; # --
+       base03 = "665c54"; # -
+       base04 = "bdae93"; # +
+       base05 = "d5c4a1"; # ++
+       base06 = "ebdbb2"; # +++
+       base07 = "fbf1c7"; # ++++
+       base08 = "fb4934"; # red
+       base09 = "fe8019"; # orange
+       base0A = "fabd2f"; # yellow
+       base0B = "b8bb26"; # green
+       base0C = "8ec07c"; # aqua/cyan
+       base0D = "83a598"; # blue
+       base0E = "d3869b"; # purple
+       base0F = "d65d0e"; # brown
      };
     polarity = "dark";
     opacity.terminal = 0.8;

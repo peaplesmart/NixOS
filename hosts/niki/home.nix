@@ -45,7 +45,7 @@ in
     save_filename_format=swappy-%Y%m%d-%H%M%S.png
     show_panel=false
     line_size=5
-    text_size=20
+    text_size= 13
     text_font=Ubuntu
     paint_mode=brush
     early_exit=true
@@ -82,6 +82,8 @@ in
   stylix.targets.waybar.enable = false;
   stylix.targets.rofi.enable = false;
   stylix.targets.hyprland.enable = false;
+  stylix.targets.neovim.enable = true;
+  stylix.targets.kitty.enable = true;
   gtk = {
     iconTheme = {
       name = "Papirus-Dark";
@@ -212,7 +214,7 @@ in
         };
         lib.mkPrio.background = [
           {
-            path = "/home/${username}/Pictures/Wallpapers/zaney-wallpaper.jpg";
+            path = "/home/${username}/Pictures/Wallpapers/wallpaper-nixos-gruvbox.jpg";
             blur_passes = 3;
             blur_size = 8;
           }
@@ -231,7 +233,7 @@ in
         ];
         lib.mkPrio.input-field = [
           {
-            size = "200, 50";
+            size = "80, 30";
             position = "0, -80";
             monitor = "";
             dots_center = true;
@@ -239,7 +241,7 @@ in
             font_color = "rgb(CFE6F4)";
             inner_color = "rgb(657DC2)";
             outer_color = "rgb(0D0E15)";
-            outline_thickness = 5;
+            outline_thickness = 3;
             placeholder_text = "Password...";
             shadow_passes = 2;
           }

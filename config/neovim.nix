@@ -32,6 +32,7 @@ in
         auto-session
         bufferline-nvim
         dressing-nvim
+        gruvbox-material
         indent-blankline-nvim
         nui-nvim
         finecmdline
@@ -81,6 +82,7 @@ in
         require("bufferline").setup{}
         require("lualine").setup({
           icons_enabled = true,
+          theme = "gruvbox-material",
         })
       '';
     };
