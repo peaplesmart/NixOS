@@ -26,6 +26,7 @@ in
     ../../config/waybar.nix
     ../../config/wlogout.nix
     ../../config/fastfetch
+    ../../config/vscode/vscode.nix
   ];
 
   # Place Files Inside Home Directory
@@ -82,8 +83,9 @@ in
   stylix.targets.waybar.enable = false;
   stylix.targets.rofi.enable = false;
   stylix.targets.hyprland.enable = false;
-  stylix.targets.neovim.enable = true;
+  stylix.targets.neovim.enable = false;
   stylix.targets.kitty.enable = true;
+  stylix.targets.vscode.enable = false;
   gtk = {
     iconTheme = {
       name = "Papirus-Dark";
@@ -170,10 +172,10 @@ in
         inactive_tab_font_style bold
       '';
     };
-     starship = {
+      starship = {
             enable = true;
             package = pkgs.starship;
-     };
+      };
     bash = {
       enable = true;
       enableCompletion = true;

@@ -59,10 +59,12 @@ in
         nvim-tree-lua
         telescope-fzf-native-nvim
         vim-tmux-navigator
+        yazi-nvim
       ];
       extraConfig = ''
         set noemoji
         nnoremap : <cmd>FineCmdline<CR>
+        colorscheme gruvbox-material
       '';
       extraLuaConfig = ''
         ${builtins.readFile ./nvim/options.lua}
@@ -78,12 +80,9 @@ in
         ${builtins.readFile ./nvim/plugins/todo-comments.lua}
         ${builtins.readFile ./nvim/plugins/treesitter.lua}
         ${builtins.readFile ./nvim/plugins/fine-cmdline.lua}
+        ${builtins.readFile ./nvim/plugins/lualine.lua}
         require("ibl").setup()
         require("bufferline").setup{}
-        require("lualine").setup({
-          icons_enabled = true,
-          theme = "gruvbox-material",
-        })
       '';
     };
   };

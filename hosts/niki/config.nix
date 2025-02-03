@@ -274,6 +274,7 @@ in
     unzip
     unrar
     libnotify
+    libreoffice-still
     v4l-utils
     ydotool
     duf
@@ -296,6 +297,8 @@ in
     appimage-run
     networkmanagerapplet
     yad
+    yazi
+    yazi-unwrapped
     inxi
     playerctl
     nh
